@@ -1,7 +1,11 @@
 /* General Body & Typography */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light grey text */
+    background-color: #121212; 
+    color: #e0e0e0; 
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -29,7 +33,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    border-bottom: 2px solid #03dac6; /* Accent color border */
+    border-bottom: 2px solid #03dac6;
     padding-bottom: 10px;
     margin-top: 40px;
 }
@@ -39,7 +43,7 @@ p, li {
 }
 
 a {
-    color: #bb86fc; /* Accent color for links */
+    color: #bb86fc;
     text-decoration: none;
 }
 
@@ -83,6 +87,17 @@ nav a {
     text-decoration: none;
 }
 
+/* Certifications Section */
+.cert-card {
+    background-color: #1f1f1f;
+    border-left: 4px solid #bb86fc; /* Accent color on the side */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+.cert-card h3 {
+    margin-top: 0;
+}
 
 /* Skills Section */
 .skills-grid {
@@ -116,7 +131,7 @@ nav a {
     border-radius: 8px;
     padding: 25px;
     margin-bottom: 30px;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .project-card:hover {
@@ -133,6 +148,7 @@ nav a {
 
 .technologies {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .technologies span {
@@ -147,6 +163,10 @@ nav a {
     margin-bottom: 5px;
 }
 
+.project-link {
+    display: inline-block;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -154,4 +174,15 @@ footer {
     margin-top: 50px;
     background-color: #1f1f1f;
     border-top: 1px solid #333;
+}
+
+.social-links a {
+    color: #e0e0e0;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #03dac6;
 }
