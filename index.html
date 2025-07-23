@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jestine Jojo - Cybersecurity Portfolio</title>
-    <!-- We will create this CSS file in the next step -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
 
     <header>
         <h1>JESTINE JOJO</h1>
-        <p class="subtitle">Cybersecurity Professional & Security Automation Developer</p>
+        <p class="subtitle">Cybersecurity Professional | Security Automation | Web Developer</p>
         <nav>
             <a href="#about">About</a>
-            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <!-- Link to your resume PDF in the repository -->
+            <a href="#skills">Skills</a>
             <a href="Resume.pdf" target="_blank" class="button">View Resume</a>
         </nav>
     </header>
@@ -31,44 +30,36 @@
                 Emerging cybersecurity professional completing a Bachelor of Cyber Security at Deakin University. Hands-on experience building security-automation tooling and analysing threats through capstone and virtual industry projects. Familiar with core frameworks and concepts including the NIST CSF, CIA triad, CISSP's eight security domains, and SIEM fundamentals. A collaborative person seeking internship or graduate roles in cyber security, IT, or related fields.
             </p>
         </section>
-
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages & Scripting</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Bash</li>
-                        <li>SQL (basic)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Security Tools</h3>
-                    <ul>
-                        <li>Nmap</li>
-                        <li>Metasploit</li>
-                        <li>Burp Suite</li>
-                        <li>John the Ripper</li>
-                        <li>OWASP ZAP</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>DevOps & Platforms</h3>
-                    <ul>
-                        <li>Linux</li>
-                        <li>Git/GitHub</li>
-                        <li>Docker</li>
-                        <li>Jenkins</li>
-                        <li>REST APIs</li>
-                    </ul>
-                </div>
+        
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="cert-card">
+                <h3>Google Cybersecurity Professional Certificate (Ongoing)</h3>
+                <p>Developing hands-on skills in security models, risk management, network security, SIEM tools, and threat intelligence through Google's industry-recognized program.</p>
             </div>
         </section>
 
         <section id="projects">
             <h2>Featured Projects</h2>
             
+            <!-- VUE.JS PROJECT -->
+            <div class="project-card">
+                <h3>Vue.js E-commerce Art Store</h3>
+                <p class="project-role">Academic Project (SIT120 Introduction to Responsive Web Apps)</p>
+                <p>An interactive e-commerce storefront for an Art Store, built with Vue.js to create an immersive and user-friendly shopping experience with a focus on modern design principles.</p>
+                <ul>
+                    <li>Developed a dynamic and responsive front-end using <strong>Vue.js</strong>, ensuring a seamless experience on desktops, tablets, and smartphones.</li>
+                    <li>Implemented a toggleable <strong>dark mode</strong> and subtle animations to enhance visual comfort and user engagement.</li>
+                    <li>Designed interactive UI components, including clickable artwork cards and smooth page transitions, to create a more intuitive user journey.</li>
+                    <li>Researched and planned for future back-end integration with Firebase/MongoDB for data persistence and Stripe for secure payment processing.</li>
+                </ul>
+                <div class="technologies">
+                    <span>Vue.js</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Responsive Design</span><span>Firebase (planned)</span>
+                </div>
+                <a href="https://deakin.au.panopto.com/Panopto/Pages/Viewer.aspx?id=a31eac70-305c-49a5-8571-b20000b21f22" class="button project-link" target="_blank">View Video Demo</a>
+            </div>
+
+            <!-- CAPSTONE PROJECT -->
             <div class="project-card">
                 <h3>Capstone: AppAttack Security-Automation Toolkit</h3>
                 <p class="project-role">Security Automation Developer (Mar 2025 - May 2025)</p>
@@ -76,50 +67,61 @@
                 <ul>
                     <li>Engineered Python parsers for Nmap, John the Ripper, and Metasploit, converting raw output to structured JSON for analysis.</li>
                     <li>Designed a Bash workflow (Recon, Scans, Exploitation) that streamlined the entire security testing process.</li>
-                    <li>Maintained the GitHub repo, resolved merge conflicts, and mentored peers on Git branching.</li>
                 </ul>
                 <div class="technologies">
-                    <span>Python</span>
-                    <span>Bash</span>
-                    <span>Nmap</span>
-                    <span>Metasploit</span>
-                    <span>Git</span>
-                    <span>Trello</span>
+                    <span>Python</span><span>Bash</span><span>Nmap</span><span>Metasploit</span><span>Git</span><span>Trello</span>
                 </div>
-                <!-- If this project is on GitHub, add the link here! -->
-                <!-- <a href="#" class="button">View on GitHub</a> -->
+                <a href="https://github.com/Jec360" class="button project-link" target="_blank">View on GitHub</a>
             </div>
 
+            <!-- DEVOPS PROJECT -->
             <div class="project-card">
                 <h3>CI/CD DevOps Pipeline for Book-Review Web App</h3>
                 <p class="project-role">Academic Project (Oct 2024 - Aug 2024)</p>
-                <p>Orchestrated a Jenkins Declarative Pipeline to containerise and deploy a full-stack application (React, Node.js, MongoDB) with automated testing and quality gates.</p>
+                <p>Orchestrated a Jenkins Declarative Pipeline to containerise and deploy a full-stack application with automated testing and quality gates.</p>
                 <ul>
                     <li>Automated the end-to-end build → test → SonarQube analysis → deploy flow on every pull-request.</li>
-                    <li>Enforced SonarQube quality gates, slashing technical-debt issues by 70%.</li>
                     <li>Cut manual release time from 30 minutes to under 5 minutes using Docker and GitHub Actions.</li>
                 </ul>
                 <div class="technologies">
-                    <span>Jenkins</span>
-                    <span>Docker</span>
-                    <span>SonarQube</span>
-                    <span>React.js</span>
-                    <span>Node.js</span>
-                    <span>GitHub Actions</span>
+                    <span>Jenkins</span><span>Docker</span><span>SonarQube</span><span>React.js</span><span>Node.js</span><span>GitHub Actions</span>
                 </div>
-                <!-- <a href="#" class="button">View on GitHub</a> -->
+                <a href="https://github.com/Jec360" class="button project-link" target="_blank">View on GitHub</a>
             </div>
+        </section>
 
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages & Scripting</h3>
+                    <ul>
+                        <li>Python</li><li>Bash</li><li>SQL</li><li>HTML & CSS</li><li>JavaScript (Basic)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Security Tools</h3>
+                    <ul>
+                        <li>Nmap</li><li>Metasploit</li><li>Burp Suite</li><li>John the Ripper</li><li>OWASP ZAP</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps & Platforms</h3>
+                    <ul>
+                        <li>Linux</li><li>Git/GitHub</li><li>Docker</li><li>Jenkins</li><li>REST APIs</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>Get in Touch:</p>
-        <p>
-            <a href="mailto:jestinejojo17@gmail.com">jestinejojo17@gmail.com</a> | 
-            <a href="https://linkedin.com/in/jestine-jojo-94a620259" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/Jec360" target="_blank">GitHub</a>
-        </p>
+        <div class="social-links">
+            <a href="mailto:jestinejojo17@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/jestine-jojo-94a620259" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Jec360" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
     </footer>
 
 </body>
