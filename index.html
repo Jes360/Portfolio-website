@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Jestine Jojo, a Graduate Cybersecurity Professional specializing in malware analysis, network forensics, security automation, and secure web development.">
+    <title>Jestine Jojo | Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                JESTINE_JOJO<span>.sh</span>
+            </div>
+            <nav id="nav-menu">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <!-- Assuming Resume.pdf is in the same directory -->
+            <a href="Resume.pdf" target="_blank" class="btn-resume">
+                <i class="fa-solid fa-file-pdf"></i> Resume
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-tag">
+                <i class="fa-solid fa-shield-halved"></i> Ready for SOC Operations
+            </div>
+            <h1>
+                Securing Systems.
+                <span>Automating Workflows.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Graduate Cybersecurity Professional with a Bachelor of Cyber Security (Deakin University) and a background in security automation, memory forensics, and web development.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#projects" class="btn-primary">Explore Labs & Projects</a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
+            </div>
+        </section>
+
+        <!-- Interactive Terminal Simulator -->
+        <section class="terminal-section">
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="term-btn red"></span>
+                        <span class="term-btn yellow"></span>
+                        <span class="term-btn green"></span>
+                    </div>
+                    <div class="terminal-title">guest@jestine-cybersec-portfolio:~</div>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-line terminal-output success">======================================================================
+__  __     __                   __ 
+\ \/ /_ __/ /  ___  _______ ___/ /
+ \  / // / _ \/ _ \/ __/ -_) _  / 
+ /_/\_,_/_.__/\___/_/  \__/\_,_/  
+                                  
+Jestine Jojo | Cybersecurity Graduate
+Type 'help' to see list of available commands.
+======================================================================</div>
+                    <div class="terminal-line terminal-output info">Last login: Sun Jun 21 23:36:21 2026 from local_host</div>
+                    
+                    <div class="terminal-input-line" id="input-line-template">
+                        <span class="terminal-prompt">[guest@jestine-portfolio ~]$</span>
+                        <input type="text" class="terminal-input-field" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section-padding">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I am a highly motivated <strong>Bachelor of Cyber Security</strong> graduate from Deakin University (Melbourne, Australia), with an academic record featuring High Distinction grades in Cyber Security Analytics, Database Fundamentals, Responsive Web Apps, and Intro to Data Science/AI.
+                    </p>
+                    <p>
+                        My expertise bridges the gap between hands-on security operations (threat hunting, digital forensics, malware analysis) and secure software development/automation. I enjoy writing Python and Bash scripts to streamline tedious processes and build workflows.
+                    </p>
+                    <p>
+                        I am currently seeking a starting role in security operations, such as a <strong>SOC Analyst</strong> or <strong>Junior Cyber Security Consultant</strong>, where I can apply my threat-detection and forensics skills to protect enterprise environments.
+                    </p>
+                </div>
+                <div class="about-badge-grid">
+                    <div class="about-badge-card">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h4>Degree</h4>
+                        <p>B. Cyber Security (Deakin)</p>
+                    </div>
+                    <div class="about-badge-card">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h4>Credentials</h4>
+                        <p>Google Cybersecurity Cert</p>
+                    </div>
+                    <div class="about-badge-card">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <h4>Automation</h4>
+                        <p>Python, Bash, CI/CD</p>
+                    </div>
+                    <div class="about-badge-card">
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <h4>Operations</h4>
+                        <p>Threat Hunting & Forensics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Internship Section -->
+        <section id="experience" class="section-padding">
+            <h2>Experience</h2>
+            <div class="timeline">
+                
+                <!-- WERS Internship -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Oct 2025 – Dec 2025</div>
+                        <h3 class="timeline-title">Website Developer & Consultant (Internship)</h3>
+                        <div class="timeline-company">
+                            Whitehorse Emergency Relief & Support (WERS)
+                            <span class="badge-impact"><i class="fa-solid fa-trophy"></i> Community Impact Award</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Redesigned and customized the organization's public-facing digital platform to align with community member needs and accessibility standards.</li>
+                            <li>Authored comprehensive, long-term technical documentation and handover reports, ensuring sustainable operations.</li>
+                            <li>Successfully presented the project impact to peer groups and organizational stakeholders.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- BP Australia -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Apr 2025 – Present</div>
+                        <h3 class="timeline-title">Customer Service / Console Operator</h3>
+                        <div class="timeline-company">BP Australia</div>
+                        <ul class="timeline-bullets">
+                            <li>Process financial transactions accurately and efficiently, maintaining high standards of cash-handling security.</li>
+                            <li>Monitor forecourt security cameras and CCTV systems to ensure safety, regulatory compliance, and rapid response to site incidents.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technical Labs & Projects Section -->
+        <section id="projects" class="section-padding">
+            <h2>Technical Labs & Projects</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: -1rem; margin-bottom: 2rem;">
+                Click on any project to view detailed writeups, sample commands, and forensic methodologies used.
+            </p>
+            <div class="projects-grid">
+                
+                <!-- Project 1: Volatility -->
+                <div class="project-card" data-project="volatility">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div class="project-card-header">
+                        <h3>Process Injection Investigation</h3>
+                        <div class="project-role-badge">Memory Forensics / Threat Hunting</div>
+                    </div>
+                    <p class="project-card-desc">
+                        Acquired physical memory from a malware-infected VM and analyzed it using the Volatility 3 framework to detect advanced process hollowing techniques.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Volatility 3</span>
+                        <span class="tech-tag">Memory Forensics</span>
+                        <span class="tech-tag">Process Hollowing</span>
+                        <span class="tech-tag">VirtualBox</span>
+                    </div>
+                    <div class="project-click-indicator">
+                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Project 2: WiFi Forensics -->
+                <div class="project-card" data-project="wifi">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <div class="project-card-header">
+                        <h3>WiFi Forensics & Decryption</h3>
+                        <div class="project-role-badge">Network Forensics / Packet Analysis</div>
+                    </div>
+                    <p class="project-card-desc">
+                        Analyzed an encrypted wireless packet capture, performed MAC traffic analysis, successfully cracked the WEP key, and decrypted network traffic in Wireshark.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Wireshark</span>
+                        <span class="tech-tag">tshark</span>
+                        <span class="tech-tag">aircrack-ng</span>
+                        <span class="tech-tag">tcpdump</span>
+                    </div>
+                    <div class="project-click-indicator">
+                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Project 3: AppAttack -->
+                <div class="project-card" data-project="appattack">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <div class="project-card-header">
+                        <h3>AppAttack Automation Toolkit</h3>
+                        <div class="project-role-badge">Security Automation / DevSecOps</div>
+                    </div>
+                    <p class="project-card-desc">
+                        Engineered custom Python parsers for security tools and chained them with a Bash script to automate asset reconnaissance, scanning, and vulnerability checks.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">Nmap</span>
+                        <span class="tech-tag">Metasploit</span>
+                        <span class="tech-tag">John the Ripper</span>
+                    </div>
+                    <div class="project-click-indicator">
+                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Project 4: SDN Security -->
+                <div class="project-card" data-project="sdn">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <div class="project-card-header">
+                        <h3>SDN Security & DoS Benchmarking</h3>
+                        <div class="project-role-badge">Advanced Network Security</div>
+                    </div>
+                    <p class="project-card-desc">
+                        Created custom OpenFlow networks using Mininet and ONOS controller. Analyzed network degradation (throughput/jitter) under UDP-based DoS flood attacks.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Mininet</span>
+                        <span class="tech-tag">ONOS</span>
+                        <span class="tech-tag">iperf3</span>
+                        <span class="tech-tag">SDN</span>
+                    </div>
+                    <div class="project-click-indicator">
+                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Project 5: CI/CD Pipeline -->
+                <div class="project-card" data-project="pipeline">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-code-commit"></i>
+                    </div>
+                    <div class="project-card-header">
+                        <h3>Secure CI/CD DevOps Pipeline</h3>
+                        <div class="project-role-badge">DevSecOps / Vulnerability Management</div>
+                    </div>
+                    <p class="project-card-desc">
+                        Orchestrated a declarative Jenkins pipeline incorporating static analysis quality gates and test suites, reducing codebase technical debt by 70%.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag">SonarQube</span>
+                        <span class="tech-tag">Jest</span>
+                        <span class="tech-tag">React.js</span>
+                    </div>
+                    <div class="project-click-indicator">
+                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Project 6: Graph API -->
+                <div class="project-card" data-project="graph-api">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <div class="project-card-header">
+                        <h3>Production Microsoft Graph API</h3>
+                        <div class="project-role-badge">Backend API & Caching</div>
+                    </div>
+                    <p class="project-card-desc">
+                        Developed a scalable FastAPI service integrated with Microsoft Graph OAuth workflows, incorporating Redis caching, Celery tasks, and Prometheus monitoring.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Celery</span>
+                        <span class="tech-tag">Prometheus</span>
+                    </div>
+                    <div class="project-click-indicator">
+                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Matrix Section -->
+        <section id="skills" class="section-padding">
+            <h2>Skills Matrix</h2>
+            <div class="skills-wrapper">
+                
+                <!-- Category 1: Security Tools -->
+                <div class="skills-category">
+                    <div class="skills-category-title">
+                        <i class="fa-solid fa-terminal"></i> Security & Forensics
+                    </div>
+                    <div class="skills-badges">
+                        <div class="skill-badge"><i class="fa-solid fa-magnifying-glass"></i> Volatility 3</div>
+                        <div class="skill-badge"><i class="fa-solid fa-spider"></i> Wireshark</div>
+                        <div class="skill-badge"><i class="fa-solid fa-cube"></i> tcpdump / tshark</div>
+                        <div class="skill-badge"><i class="fa-solid fa-key"></i> aircrack-ng</div>
+                        <div class="skill-badge"><i class="fa-solid fa-circle-nodes"></i> Nmap</div>
+                        <div class="skill-badge"><i class="fa-solid fa-lock"></i> Autopsy</div>
+                        <div class="skill-badge"><i class="fa-solid fa-skull"></i> Metasploit</div>
+                        <div class="skill-badge"><i class="fa-solid fa-shield-virus"></i> OWASP ZAP / Nikto</div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Languages & Automation -->
+                <div class="skills-category">
+                    <div class="skills-category-title">
+                        <i class="fa-solid fa-code"></i> Languages & Dev
+                    </div>
+                    <div class="skills-badges">
+                        <div class="skill-badge"><i class="fa-brands fa-python"></i> Python</div>
+                        <div class="skill-badge"><i class="fa-solid fa-hashtag"></i> Bash Scripting</div>
+                        <div class="skill-badge"><i class="fa-solid fa-database"></i> SQL (PostgreSQL)</div>
+                        <div class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript (React, Vue)</div>
+                        <div class="skill-badge"><i class="fa-brands fa-html5"></i> HTML5 / CSS3</div>
+                        <div class="skill-badge"><i class="fa-brands fa-node-js"></i> Node.js / FastAPI</div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Platforms & Concepts -->
+                <div class="skills-category">
+                    <div class="skills-category-title">
+                        <i class="fa-solid fa-server"></i> Platforms & Infrastructure
+                    </div>
+                    <div class="skills-badges">
+                        <div class="skill-badge"><i class="fa-brands fa-linux"></i> Linux Administration</div>
+                        <div class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
+                        <div class="skill-badge"><i class="fa-brands fa-jenkins"></i> Jenkins CI/CD</div>
+                        <div class="skill-badge"><i class="fa-solid fa-chart-line"></i> Prometheus & Redis</div>
+                        <div class="skill-badge"><i class="fa-solid fa-cubes"></i> Mininet & ONOS (SDN)</div>
+                        <div class="skill-badge"><i class="fa-solid fa-users"></i> Agile Scrum / Trello</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding contact-section">
+            <h2>Contact</h2>
+            <p class="contact-text">
+                I am looking for a starting role in cybersecurity where I can help protect and defend assets. Let's discuss how I can add value to your team.
+            </p>
+            <div class="contact-info-grid">
+                
+                <!-- Email -->
+                <div class="contact-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p><a href="mailto:jestinejojo@gmail.com">jestinejojo@gmail.com</a></p>
+                </div>
+
+                <!-- Location -->
+                <div class="contact-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4>Location</h4>
+                    <p>Melbourne, VIC, Australia</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/jestine-jojo" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Jes360" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:jestinejojo@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2026 Jestine Jojo. Built with cyber aesthetics and clean code.</p>
+            <p style="font-size: 0.75rem; color: var(--text-dark); margin-top: 0.25rem;">[guest@jestine-portfolio ~]$ exit</p>
+        </div>
+    </footer>
+
+    <!-- Overlay & Project Detail Modal -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h3 id="modal-title-text">Project Details</h3>
+                    <div class="project-role-badge" id="modal-role-text">Sub-discipline</div>
+                </div>
+                <button class="modal-close-btn" id="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Content injected dynamically via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script linking -->
+    <script src="script.js"></script>
+</body>
+</html>
