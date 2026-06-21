@@ -72,7 +72,7 @@ This isolated 802.11 data frames (Type 2) with the 'Protected Frame' bit set. I 
 🔑 Step 2: Cracking the WEP Key
 I ran `aircrack-ng` on the capture, which processed the IVs and successfully cracked the WEP key in seconds: D0:E5:9E:B9:04.
 
-🔓 Step 3: Decrypting & Analyzing the Attack Flow
+🔓 Step 3: Decrypting & Analysing the Attack Flow
 I loaded the key into Wireshark to decrypt the data payloads and ran tshark to extract the MAC communication pairs:
 `tshark -r wifi.pcap -Y "wlan.fc.type == 2 && wlan.fc.protected == 1" -T fields -e wlan.sa -e wlan.da | sort | uniq -c | sort -nr`
 
@@ -95,7 +95,7 @@ Full lab breakdown on my portfolio: https://jes360.github.io/Portfolio-website/
 ```text
 ⚙️ Benchmarking Network Resilience: SDN Security Testing in Mininet & ONOS
 
-Software-Defined Networking (SDN) centralizes control, but it also centralizes the threat landscape. In this network security project, I simulated and analyzed the impact of a Denial of Service (DoS) attack on an OpenFlow network:
+Software-Defined Networking (SDN) centralizes control, but it also centralizes the threat landscape. In this network security project, I simulated and analysed the impact of a Denial of Service (DoS) attack on an OpenFlow network:
 
 🏗️ The Architecture:
 I configured a custom single topology in Mininet and mapped it to a remote ONOS (Open Network Operating System) controller:
@@ -111,7 +111,7 @@ Using hping3 from an attacker host, I launched a high-velocity UDP flood targeti
 📉 The Impact:
 Under attack, UDP bandwidth testing crashed immediately. Active sessions reported 'Connection refused' errors, TCP throughput collapsed from 95% capacity to 0%, and packet drop rates spiked catastrophically.
 
-💡 SOC Analyst Takeaway: Understanding flow-based switching and controllers like ONOS is crucial as modern enterprises move to SD-WAN. Detecting anomalies in flow rules and traffic spikes is the first line of defense against infrastructure exhaustion.
+💡 SOC Analyst Takeaway: Understanding flow-based switching and controllers like ONOS is crucial as modern enterprises move to SD-WAN. Detecting anomalies in flow rules and traffic spikes is the first line of defence against infrastructure exhaustion.
 
 Read my complete research paper on my portfolio: https://jes360.github.io/Portfolio-website/
 

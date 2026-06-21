@@ -1,6 +1,6 @@
 # 💼 Job Search Strategy & Daily Upgrade Plan
 
-This document outlines a targeted job application strategy optimized for your **485 Temporary Graduate Visa** status, clarifies what you can and cannot apply for, explains how we will work together to apply for jobs daily, and provides a structured roadmap to upgrade your technical capabilities for a Security Operations Center (SOC) role.
+This document outlines a targeted job application strategy optimized for your **485 Temporary Graduate Visa** status, clarifies what you can and cannot apply for, explains how we will work together to apply for jobs daily, and provides a structured roadmap to upgrade your technical capabilities for a Security Operations Centre (SOC) role.
 
 ---
 
@@ -12,7 +12,7 @@ This document outlines a targeted job application strategy optimized for your **
 >
 > **This is a common and critical misunderstanding:**
 > * **485 Temporary Graduate Visa:** Gives you **full work rights** (unlimited hours) with any employer in Australia for 2 years. However, it is a **temporary visa** and does **NOT** make you an Australian Citizen or Permanent Resident (PR).
-> * **Jobs requiring Citizenship or PR:** Many cybersecurity roles (especially in government, defense, or with government contractors) require a **National Security Clearance** (e.g., Baseline, NV1, NV2). By law, these clearances are strictly restricted to **Australian Citizens** (and in extremely rare cases, Permanent Residents). 
+> * **Jobs requiring Citizenship or PR:** Many cybersecurity roles (especially in government, defence, or with government contractors) require a **National Security Clearance** (e.g., Baseline, NV1, NV2). By law, these clearances are strictly restricted to **Australian Citizens** (and in extremely rare cases, Permanent Residents). 
 > * **Conclusion:** You **cannot** apply for jobs that explicitly require Australian Citizenship or Permanent Residency. If you apply, your application will be automatically rejected by the applicant tracking systems (ATS) during the screening questions.
 
 ### Where You SHOULD Focus Your Job Search
@@ -66,14 +66,14 @@ If you struggle to land a pure SOC analyst role immediately, **do not hesitate t
 To stand out to SOC managers, you must showcase practical skills that go beyond a degree. Follow this **1-hour-a-day schedule** to build hands-on blue-team expertise:
 
 ### 📅 Monday: SIEM & Log Analysis (The Core SOC Skill)
-* **Focus:** Understanding how to search, filter, and analyze logs in a Security Information and Event Management (SIEM) tool.
+* **Focus:** Understanding how to search, filter, and analyse logs in a Security Information and Event Management (SIEM) tool.
 * **Weekly Tasks:**
   1. Create a free account on **Splunk Lantern** or download **Splunk Enterprise (Free trial)** locally.
   2. Complete the free **Splunk Basics** or **TryHackMe SOC Level 1 Pathway** (Splunk modules).
   3. Practice writing basic search queries (SPL) to locate anomalies (e.g., failed logins, suspicious execution flags).
 
 ### 📅 Tuesday: Network Traffic Analysis (PCAP Analysis)
-* **Focus:** Analyzing packet captures to identify malicious command-and-control (C2) channels, exfiltration, or scanning.
+* **Focus:** Analysing packet captures to identify malicious command-and-control (C2) channels, exfiltration, or scanning.
 * **Weekly Tasks:**
   1. Open **Wireshark** and download sample packet captures from [Wireshark Sample Captures](https://wiki.wireshark.org/SampleCaptures) or malware analysis sites (e.g., malware-traffic-analysis.net).
   2. Practice applying filters: isolate HTTP GET/POST requests, filter out TCP handshakes, follow stream paths, and identify anomalous payloads.

@@ -37,7 +37,7 @@ python vol.py -f SIT324_8.3D.bin windows.ldrmodules.LdrModules --pid 5636`,
             "<strong>IV Analysis:</strong> Formulated custom <code>tcpdump</code> filters using bitwise operations (<code>wlan[0] & 0x0C = 0x08</code> and <code>wlan[1] & 0x40 = 0x40</code>) to filter WEP-protected data frames. Counted 29,719 unique Initialization Vectors (IVs), confirming statistical viability for offline cracking.",
             "<strong>WEP Key Crack:</strong> Orchestrated <code>aircrack-ng</code> against the capture file, successfully processing the IVs and recovering the raw WEP key: <code>D0:E5:9E:B9:04</code> in under 10 seconds.",
             "<strong>Traffic Decryption:</strong> Imported the recovered WEP key into Wireshark's IEEE 802.11 preferences, decrypting previously scrambled packets and exposing the underlying layers.",
-            "<strong>Flow and Attack Reconstitution:</strong> Analyzed the decrypted stream using <code>tshark</code> and custom shell pipelines (<code>sort | uniq -c | sort -nr</code>). Identified Client MACs, AP MAC (<code>00:23:69:61:00:d0</code>), and the Attacker MAC (<code>1c:4b:d6:69:cd:07</code>) performing a high-rate ARP Replay injection attack to force IV generation."
+            "<strong>Flow and Attack Reconstitution:</strong> Analysed the decrypted stream using <code>tshark</code> and custom shell pipelines (<code>sort | uniq -c | sort -nr</code>). Identified Client MACs, AP MAC (<code>00:23:69:61:00:d0</code>), and the Attacker MAC (<code>1c:4b:d6:69:cd:07</code>) performing a high-rate ARP Replay injection attack to force IV generation."
         ],
         code: `# Network Forensic Commands
 # 1. Filter and count protected data frames using tcpdump
@@ -52,7 +52,7 @@ aircrack-ng wifi.pcap`,
             { url: "images/wifi_page_1_img_1.png", caption: "Initial wireless packet capture analysis in Wireshark identifying WEP-protected data frames." },
             { url: "images/wifi_page_2_img_3.png", caption: "Decrypted ARP packets displaying clean IP address mappings and packet flow structures." }
         ],
-        socImpact: "Demonstrates high-level packet analysis, wireless protocol knowledge, and proficiency in Linux CLI tools (tcpdump, tshark) which are essential for analyzing PCAP files during network threat triage."
+        socImpact: "Demonstrates high-level packet analysis, wireless protocol knowledge, and proficiency in Linux CLI tools (tcpdump, tshark) which are essential for analysing PCAP files during network threat triage."
     },
     appattack: {
         title: "AppAttack Security Automation Toolkit",
@@ -114,7 +114,7 @@ timeout 15 h3 hping3 --flood --udp -p 80 10.0.0.1`,
             { url: "images/sdn_page_2_img_3.png", caption: "SDN baseline performance charts displaying stable TCP and UDP throughput before flooding." },
             { url: "images/sdn_page_4_img_8.png", caption: "Throughput degradation charts showing 100% loss of UDP traffic connectivity under flood attack." }
         ],
-        socImpact: "Demonstrates knowledge of modern network control planes (SDN), flow table rules, traffic benchmarking, and analyzing DDoS impacts on infrastructure."
+        socImpact: "Demonstrates knowledge of modern network control planes (SDN), flow table rules, traffic benchmarking, and analysing DDoS impacts on infrastructure."
     },
     pipeline: {
         title: "Secure CI/CD DevOps Pipeline",
