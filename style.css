@@ -184,12 +184,38 @@ nav a:hover, nav a.active {
     font-size: 0.9rem;
     font-weight: 600;
     background: rgba(0, 210, 255, 0.05);
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
 }
 
 .btn-resume:hover {
     background: var(--cyber-blue);
     color: var(--bg-darker);
     box-shadow: var(--shadow-blue);
+}
+
+.header-buttons {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.btn-transcript {
+    border: 1px solid var(--cyber-green);
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    color: var(--cyber-green);
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: rgba(0, 255, 102, 0.05);
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-transcript:hover {
+    background: var(--cyber-green);
+    color: var(--bg-darker);
+    box-shadow: var(--shadow-green);
 }
 
 /* Hero Section */
