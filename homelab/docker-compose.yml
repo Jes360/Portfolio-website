@@ -55,6 +55,7 @@ services:
     ports:
       - "8000:8000" # Web UI access
       - "9997:9997" # Forwarder port for log ingestion
+      - "8088:8088" # HTTP Event Collector (HEC) for log ingestion
     environment:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=Sudo_cyber_secure123

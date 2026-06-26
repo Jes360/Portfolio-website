@@ -148,34 +148,46 @@ pipeline {
 }`,
         socImpact: "Highlights DevSecOps integration, static analysis tools (SAST), vulnerability remediation, and collaboration with developers to secure the software supply chain."
     },
-    "graph-api": {
-        title: "Production Ready Microsoft Graph API",
-        role: "Backend API Engineering & Monitoring",
-        meta: "Personal / Academic Development",
-        desc: "A production-grade Python web service integrating FastAPI with Microsoft Graph API using OAuth 2.0, optimized with Redis caching, Celery background tasks, and Prometheus metrics.",
+    "splunk-homelab": {
+        title: "Splunk SIEM Homelab & Ingestion",
+        role: "SIEM & Security Monitoring",
+        meta: "Personal Security Engineering Lab",
+        desc: "Designed and built a local containerised security operations lab using Docker Compose. Configured Splunk Enterprise HTTP Event Collector (HEC), deployed Uptime Kuma for heartbeat checks, and engineered a non-blocking PowerShell log-streaming driver to forward system events into structured SIEM metrics.",
         findings: [
-            "<strong>OAuth 2.0 Integration:</strong> Implemented secure OAuth silent token acquisition and Client Credentials Grant Flow using Microsoft Authentication Library (MSAL).",
-            "<strong>Performance Optimization:</strong> Configured Redis Cache backend to store expensive Graph API calls, significantly reducing API latency for profile retrievals.",
-            "<strong>Background Worker:</strong> Utilized Celery with Redis broker to offload long-running batch synchronization tasks from the HTTP request loop.",
-            "<strong>Monitoring & Metrics:</strong> Integrated Prometheus FastAPI Instrumentator, exposing standard metrics (HTTP request rates, latency distribution, error codes) for real-time observability."
+            "<strong>Containerised SIEM Stack:</strong> Orchestrated a modular local Docker stack containing Splunk Enterprise, Portainer, Homepage dashboard, and Uptime Kuma for comprehensive system visibility.",
+            "<strong>Decoupled Ingestion Pipeline:</strong> Configured Splunk's HTTP Event Collector (HEC) with secure token authorisation, allowing local scripts and services to forward events without file-write latency.",
+            "<strong>PowerShell Streaming Engine:</strong> Developed an asynchronous, multi-threaded PowerShell agent that monitors running Docker container stdout/stderr feeds in background loops, dynamically generating structured JSON log payloads to forward to Splunk HEC.",
+            "<strong>Heartbeat Watchdog:</strong> Configured Uptime Kuma to run continuous uptime and status monitoring on all container endpoints, routing availability alerts and tracking SIEM availability.",
+            "<strong>SIEM Analytics & SPL:</strong> Wrote custom Search Processing Language (SPL) queries to parse container runtime events, creating dashboards representing container event volume and anomaly distribution."
         ],
-        code: `# FastAPI Cache & MSAL Integration Snippet
-from fastapi_cache import FastAPICache
-from fastapi_cache.backends.redis import RedisBackend
-from fastapi_cache.decorator import cache
-import msal
-
-@app.on_event("startup")
-async def startup():
-    redis = aioredis.from_url(os.getenv("REDIS_URL"), decode_responses=True)
-    FastAPICache.init(RedisBackend(redis), prefix="prod-cache")
-
-@app.get("/profile")
-@cache(expire=60)
-def get_profile():
-    # Fetch from MS Graph API - Cached for 60 seconds
-    return make_graph_request("https://graph.microsoft.com/v1.0/me", "profile")`,
-        socImpact: "Demonstrates solid software engineering skills, API security, OAuth token lifecycle management, caching architectures, and building application performance metrics (essential for monitoring SOC dashboards)."
+        code: `# PowerShell Streaming Engine Snippet
+# Loops through active containers and forwards log events in background threads
+foreach ($c in $containers) {
+    Start-Job -ScriptBlock {
+        param($containerName, $hecUrl, $token)
+        docker logs -f --tail 0 $containerName 2>&1 | ForEach-Object {
+            $logMessage = $_.ToString().Trim()
+            if ($logMessage) {
+                $payload = @{
+                    time = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
+                    host = "homelab-host"
+                    source = "docker:$containerName"
+                    sourcetype = "_json"
+                    event = @{ message = $logMessage; container = $containerName }
+                } | ConvertTo-Json -Compress
+                
+                # Send HTTP POST to Splunk HEC Endpoint
+                $headers = @{ "Authorization" = "Splunk $token" }
+                Invoke-RestMethod -Uri $hecUrl -Method Post -Headers $headers -Body $payload
+            }
+        }
+    } -ArgumentList $c, $SplunkHECUrl, $HECToken
+}`,
+        screenshots: [
+            { url: "images/Splunk.jpg", caption: "Splunk Enterprise dashboard displaying real-time events and parsed container log trends." },
+            { url: "images/uptime.jpg", caption: "Uptime Kuma dashboard monitoring live health and response times of containerised homelab services." }
+        ],
+        socImpact: "Demonstrates fundamental SOC Engineering skills: configuring and managing SIEM architectures (Splunk), managing data onboarding, handling structured logging drivers, and setting up system health monitoring (Uptime Kuma)."
     }
 };
 
