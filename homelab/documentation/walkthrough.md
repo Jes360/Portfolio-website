@@ -96,15 +96,18 @@ To get your Homelab running on your new PC, please follow these steps:
    - Wait 1-2 minutes until it shows a **green bar** in the bottom left corner, indicating the engine is running.
 
 3. **Execute the Start Script**:
-   - Open a PowerShell terminal.
-   - Navigate to the new homelab folder:
+   - Open VS Code and open your `portfolio-website` folder.
+   - Open a terminal (PowerShell) in VS Code (it will start in your root project folder).
+   - Navigate to the `homelab` folder:
      ```powershell
-     cd "c:\Users\jesti\OneDrive - Deakin University\Desktop\Portfolio\portfolio-website\homelab"
+     cd homelab
      ```
-   - Run the script:
+     *(If opening a separate terminal, use: `cd "C:\Users\<Your_Username>\OneDrive - Deakin University\Desktop\Portfolio\portfolio-website\homelab"`)*
+   - Run the startup script:
      ```powershell
      powershell -ExecutionPolicy Bypass -File .\start-homelab.ps1
      ```
+
 
 4. **Set Up Fresh Services (First Time Only)**:
    > [!NOTE]
