@@ -1,0 +1,74 @@
+services:
+  # ----------------------------------------------------
+  # Homepage: A beautiful, modern personal dashboard
+  # ----------------------------------------------------
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homelab-homepage
+    restart: unless-stopped
+    ports:
+      - "8085:3000"
+    volumes:
+      - ./homepage-config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock # Allows Homepage to query Docker status
+    environment:
+      - TZ=UTC
+      - HOMEPAGE_ALLOWED_HOSTS=localhost,localhost:8085,127.0.0.1,127.0.0.1:8085
+
+  # ----------------------------------------------------
+  # Portainer: Visual manager for all Docker containers
+  # ----------------------------------------------------
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: homelab-portainer
+    restart: unless-stopped
+    ports:
+      - "9000:9000" # HTTP Access
+      - "9443:9443" # HTTPS Access (preferred/secure)
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # Portainer connects to host docker to manage it
+      - portainer_data:/data
+    environment:
+      - TZ=UTC
+
+  # ----------------------------------------------------
+  # Uptime Kuma: Beautiful, self-hosted service monitor
+  # ----------------------------------------------------
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: homelab-uptime-kuma
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    volumes:
+      - uptime_kuma_data:/app/data
+    environment:
+      - TZ=UTC
+
+  # ----------------------------------------------------
+  # Splunk: Security Information and Event Management (SIEM)
+  # ----------------------------------------------------
+  splunk:
+    image: splunk/splunk:latest
+    container_name: homelab-splunk
+    restart: unless-stopped
+    ports:
+      - "8000:8000" # Web UI access
+      - "9997:9997" # Forwarder port for log ingestion
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=Sudo_cyber_secure123
+      - TZ=UTC
+    volumes:
+      - splunk_data:/opt/splunk/var
+      - splunk_etc:/opt/splunk/etc
+
+volumes:
+  portainer_data:
+    driver: local
+  uptime_kuma_data:
+    driver: local
+  splunk_data:
+    driver: local
+  splunk_etc:
+    driver: local

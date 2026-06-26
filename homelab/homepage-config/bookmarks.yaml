@@ -1,0 +1,15 @@
+# bookmarks.yaml
+- Resources:
+    - GitHub:
+        - icon: github
+          href: https://github.com/
+    - Docker Hub:
+        - icon: docker
+          href: https://hub.docker.com/
+- Self-Hosting:
+    - Reddit Homelab:
+        - icon: reddit
+          href: https://www.reddit.com/r/homelab/
+    - Reddit Self-Hosted:
+        - icon: reddit
+          href: https://www.reddit.com/r/selfhosted/

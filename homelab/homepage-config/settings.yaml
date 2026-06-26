@@ -1,0 +1,11 @@
+# settings.yaml
+title: "My Local Homelab"
+theme: dark
+color: slate
+cardBlur: md
+layout:
+  System Management:
+    style: grid
+    columns: 3
+  Bookmarks:
+    style: list

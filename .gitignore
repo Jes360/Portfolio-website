@@ -11,3 +11,7 @@ Certificates/
 desktop.ini
 Thumbs.db
 .DS_Store
+
+# Homelab logs and runtime files
+*.log
+homelab/homepage-config/logs/

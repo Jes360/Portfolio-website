@@ -1,0 +1,17 @@
+# widgets.yaml
+- search:
+    provider: google
+    target: _blank
+    placeholder: "Search the Web..."
+
+- datetime:
+    text_size: xl
+    format:
+      dateStyle: long
+      timeStyle: short
+      hour12: true
+
+- resources:
+    cpu: true
+    memory: true
+    disk: /
