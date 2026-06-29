@@ -172,123 +172,31 @@ Type 'help' to see list of available commands.
             </p>
             <div class="projects-grid">
                 
-                <!-- Project 1: Volatility -->
-                <div class="project-card" data-project="volatility">
+                <!-- Project 1: Active Directory Lab -->
+                <div class="project-card" data-project="active-directory-lab">
                     <div class="project-icon">
-                        <i class="fa-solid fa-microchip"></i>
+                        <i class="fa-solid fa-users-gears"></i>
                     </div>
                     <div class="project-card-header">
-                        <h3>Process Injection Investigation</h3>
-                        <div class="project-role-badge">Memory Forensics / Threat Hunting</div>
+                        <h3>Active Directory & SIEM Monitoring</h3>
+                        <div class="project-role-badge">Enterprise SecOps / System Admin</div>
                     </div>
                     <p class="project-card-desc">
-                        Acquired physical memory from a malware-infected VM and analysed it using the Volatility 3 framework to detect advanced process hollowing techniques.
+                        Deployed a local Active Directory domain network (homelab.local), configured Windows Server Domain Controller and Windows Client environments, automated user creation with PowerShell, simulated brute-force lockouts, and ingested security event telemetry (Event IDs 4625/4740) into Splunk SIEM.
                     </p>
                     <div class="project-tech-tags">
-                        <span class="tech-tag">Volatility 3</span>
-                        <span class="tech-tag">Memory Forensics</span>
-                        <span class="tech-tag">Process Hollowing</span>
-                        <span class="tech-tag">VirtualBox</span>
+                        <span class="tech-tag">Active Directory</span>
+                        <span class="tech-tag">Windows Server</span>
+                        <span class="tech-tag">PowerShell Scripting</span>
+                        <span class="tech-tag">Splunk Universal Forwarder</span>
+                        <span class="tech-tag">Event IDs 4625/4740</span>
                     </div>
                     <div class="project-click-indicator">
                         View Analysis details <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </div>
 
-                <!-- Project 2: WiFi Forensics -->
-                <div class="project-card" data-project="wifi">
-                    <div class="project-icon">
-                        <i class="fa-solid fa-wifi"></i>
-                    </div>
-                    <div class="project-card-header">
-                        <h3>WiFi Forensics & Decryption</h3>
-                        <div class="project-role-badge">Network Forensics / Packet Analysis</div>
-                    </div>
-                    <p class="project-card-desc">
-                        Analysed an encrypted wireless packet capture, performed MAC traffic analysis, successfully cracked the WEP key, and decrypted network traffic in Wireshark.
-                    </p>
-                    <div class="project-tech-tags">
-                        <span class="tech-tag">Wireshark</span>
-                        <span class="tech-tag">tshark</span>
-                        <span class="tech-tag">aircrack-ng</span>
-                        <span class="tech-tag">tcpdump</span>
-                    </div>
-                    <div class="project-click-indicator">
-                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-
-                <!-- Project 3: AppAttack -->
-                <div class="project-card" data-project="appattack">
-                    <div class="project-icon">
-                        <i class="fa-solid fa-gears"></i>
-                    </div>
-                    <div class="project-card-header">
-                        <h3>AppAttack Automation Toolkit</h3>
-                        <div class="project-role-badge">Security Automation / DevSecOps</div>
-                    </div>
-                    <p class="project-card-desc">
-                        Engineered custom Python parsers for security tools and chained them with a Bash script to automate asset reconnaissance, scanning, and vulnerability checks.
-                    </p>
-                    <div class="project-tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Bash</span>
-                        <span class="tech-tag">Nmap</span>
-                        <span class="tech-tag">Metasploit</span>
-                        <span class="tech-tag">John the Ripper</span>
-                    </div>
-                    <div class="project-click-indicator">
-                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-
-                <!-- Project 4: SDN Security -->
-                <div class="project-card" data-project="sdn">
-                    <div class="project-icon">
-                        <i class="fa-solid fa-network-wired"></i>
-                    </div>
-                    <div class="project-card-header">
-                        <h3>SDN Security & DoS Benchmarking</h3>
-                        <div class="project-role-badge">Advanced Network Security</div>
-                    </div>
-                    <p class="project-card-desc">
-                        Created custom OpenFlow networks using Mininet and ONOS controller. Analysed network degradation (throughput/jitter) under UDP-based DoS flood attacks.
-                    </p>
-                    <div class="project-tech-tags">
-                        <span class="tech-tag">Mininet</span>
-                        <span class="tech-tag">ONOS</span>
-                        <span class="tech-tag">iperf3</span>
-                        <span class="tech-tag">SDN</span>
-                    </div>
-                    <div class="project-click-indicator">
-                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-
-                <!-- Project 5: CI/CD Pipeline -->
-                <div class="project-card" data-project="pipeline">
-                    <div class="project-icon">
-                        <i class="fa-solid fa-code-commit"></i>
-                    </div>
-                    <div class="project-card-header">
-                        <h3>Secure CI/CD DevOps Pipeline</h3>
-                        <div class="project-role-badge">DevSecOps / Vulnerability Management</div>
-                    </div>
-                    <p class="project-card-desc">
-                        Orchestrated a declarative Jenkins pipeline incorporating static analysis quality gates and test suites, reducing codebase technical debt by 70%.
-                    </p>
-                    <div class="project-tech-tags">
-                        <span class="tech-tag">Jenkins</span>
-                        <span class="tech-tag">SonarQube</span>
-                        <span class="tech-tag">Jest</span>
-                        <span class="tech-tag">React.js</span>
-                    </div>
-                    <div class="project-click-indicator">
-                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-
-                <!-- Project 6: Splunk SIEM -->
+                <!-- Project 2: Splunk SIEM -->
                 <div class="project-card" data-project="splunk-homelab">
                     <div class="project-icon">
                         <i class="fa-solid fa-chart-line"></i>
@@ -312,24 +220,116 @@ Type 'help' to see list of available commands.
                     </div>
                 </div>
 
-                <!-- Project 7: Active Directory Lab -->
-                <div class="project-card" data-project="active-directory-lab">
+                <!-- Project 3: Volatility -->
+                <div class="project-card" data-project="volatility">
                     <div class="project-icon">
-                        <i class="fa-solid fa-users-gears"></i>
+                        <i class="fa-solid fa-microchip"></i>
                     </div>
                     <div class="project-card-header">
-                        <h3>Active Directory & SIEM Monitoring</h3>
-                        <div class="project-role-badge">Enterprise SecOps / System Admin</div>
+                        <h3>Process Injection Investigation</h3>
+                        <div class="project-role-badge">Memory Forensics / Threat Hunting</div>
                     </div>
                     <p class="project-card-desc">
-                        Deployed a local Active Directory domain network (homelab.local), configured Windows Server Domain Controller and Windows Client environments, automated user creation with PowerShell, simulated brute-force lockouts, and ingested security event telemetry (Event IDs 4625/4740) into Splunk SIEM.
+                        Acquired physical memory from a malware-infected VM and analysed it using the Volatility 3 framework to detect advanced process hollowing techniques.
                     </p>
                     <div class="project-tech-tags">
-                        <span class="tech-tag">Active Directory</span>
-                        <span class="tech-tag">Windows Server</span>
-                        <span class="tech-tag">PowerShell Scripting</span>
-                        <span class="tech-tag">Splunk Universal Forwarder</span>
-                        <span class="tech-tag">Event IDs 4625/4740</span>
+                        <span class="tech-tag">Volatility 3</span>
+                        <span class="tech-tag">Memory Forensics</span>
+                        <span class="tech-tag">Process Hollowing</span>
+                        <span class="tech-tag">VirtualBox</span>
+                    </div>
+                    <div class="project-click-indicator">
+                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Project 4: WiFi Forensics -->
+                <div class="project-card" data-project="wifi">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <div class="project-card-header">
+                        <h3>WiFi Forensics & Decryption</h3>
+                        <div class="project-role-badge">Network Forensics / Packet Analysis</div>
+                    </div>
+                    <p class="project-card-desc">
+                        Analysed an encrypted wireless packet capture, performed MAC traffic analysis, successfully cracked the WEP key, and decrypted network traffic in Wireshark.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Wireshark</span>
+                        <span class="tech-tag">tshark</span>
+                        <span class="tech-tag">aircrack-ng</span>
+                        <span class="tech-tag">tcpdump</span>
+                    </div>
+                    <div class="project-click-indicator">
+                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Project 5: AppAttack -->
+                <div class="project-card" data-project="appattack">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <div class="project-card-header">
+                        <h3>AppAttack Automation Toolkit</h3>
+                        <div class="project-role-badge">Security Automation / DevSecOps</div>
+                    </div>
+                    <p class="project-card-desc">
+                        Engineered custom Python parsers for security tools and chained them with a Bash script to automate asset reconnaissance, scanning, and vulnerability checks.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">Nmap</span>
+                        <span class="tech-tag">Metasploit</span>
+                        <span class="tech-tag">John the Ripper</span>
+                    </div>
+                    <div class="project-click-indicator">
+                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Project 6: CI/CD Pipeline -->
+                <div class="project-card" data-project="pipeline">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-code-commit"></i>
+                    </div>
+                    <div class="project-card-header">
+                        <h3>Secure CI/CD DevOps Pipeline</h3>
+                        <div class="project-role-badge">DevSecOps / Vulnerability Management</div>
+                    </div>
+                    <p class="project-card-desc">
+                        Orchestrated a declarative Jenkins pipeline incorporating static analysis quality gates and test suites, reducing codebase technical debt by 70%.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag">SonarQube</span>
+                        <span class="tech-tag">Jest</span>
+                        <span class="tech-tag">React.js</span>
+                    </div>
+                    <div class="project-click-indicator">
+                        View Analysis details <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Project 7: SDN Security -->
+                <div class="project-card" data-project="sdn">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <div class="project-card-header">
+                        <h3>SDN Security & DoS Benchmarking</h3>
+                        <div class="project-role-badge">Advanced Network Security</div>
+                    </div>
+                    <p class="project-card-desc">
+                        Created custom OpenFlow networks using Mininet and ONOS controller. Analysed network degradation (throughput/jitter) under UDP-based DoS flood attacks.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Mininet</span>
+                        <span class="tech-tag">ONOS</span>
+                        <span class="tech-tag">iperf3</span>
+                        <span class="tech-tag">SDN</span>
                     </div>
                     <div class="project-click-indicator">
                         View Analysis details <i class="fa-solid fa-arrow-right"></i>
