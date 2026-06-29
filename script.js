@@ -219,7 +219,11 @@ foreach ($u in $users) {
                -Title $u.Title \`
                -Enabled $true
 }`,
-        screenshots: [],
+        screenshots: [
+            { url: "images/Attack.png", caption: "Credential brute-force simulation triggering Active Directory lockout event telemetry on Windows Client." },
+            { url: "images/Splunk%20frw.png", caption: "Auditing Windows Security logs on Domain Controller using Splunk Universal Forwarder configuration." },
+            { url: "images/Splunk.png", caption: "Splunk search interface showing real-time ingestion of Event ID 4625 (Logon Failure) and Event ID 4740 (Account Lockout)." }
+        ],
         socImpact: "Demonstrates fundamental enterprise SecOps and IT Helpdesk skills: managing directory access controls (Active Directory), implementing host-level auditing (Windows Security Event Logs), scripting administrative workflows (PowerShell), and configuring distributed SIEM agents."
     }
 };
