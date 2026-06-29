@@ -188,6 +188,39 @@ foreach ($c in $containers) {
             { url: "images/uptime.jpg", caption: "Uptime Kuma dashboard monitoring live health and response times of containerised homelab services." }
         ],
         socImpact: "Demonstrates fundamental SOC Engineering skills: configuring and managing SIEM architectures (Splunk), managing data onboarding, handling structured logging drivers, and setting up system health monitoring (Uptime Kuma)."
+    },
+    "active-directory-lab": {
+        title: "Active Directory & Splunk Ingestion Lab",
+        role: "Enterprise SecOps / System Admin",
+        meta: "Personal Security Engineering Lab",
+        desc: "Designed and implemented a local virtualised enterprise domain (homelab.local) using VirtualBox. Set up a Windows Server Domain Controller and a Windows client system to simulate corporate IT and security operations. Automated account provisioning, simulated credential attack lockouts, and forwarded targeted Event Log telemetry into a central Splunk SIEM.",
+        findings: [
+            "<strong>Enterprise Infrastructure:</strong> Set up a VirtualBox sandbox with an isolated network host-only adapter, establishing a Domain Controller running Windows Server 2022 and joining a Windows 10/11 Enterprise client machine to the <code>homelab.local</code> domain.",
+            "<strong>Scripted Account Automation:</strong> Developed a PowerShell automation script running AD commands to provision Organizational Units (OUs) and seed 10 distinct employee accounts with appropriate attributes, mimicking an enterprise environment.",
+            "<strong>Security Event Generation:</strong> Initiated simulated credential brute-force attacks from the domain client machine, forcing account lockout mechanisms to trigger and generate target Windows Event Logs.",
+            "<strong>Telemetry Analysis:</strong> Successfully audited the Windows Security Logs to isolate critical detection indicators: <strong>Event ID 4625</strong> (Failed Logon Attempts) containing client source IPs, and <strong>Event ID 4740</strong> (Active User Account Lockouts).",
+            "<strong>Splunk Data Forwarding:</strong> Installed and configured the Splunk Universal Forwarder agent on the Domain Controller. Modified <code>inputs.conf</code> with selective Event ID whitelists, routing real-time security events to Splunk over port 9997/8088."
+        ],
+        code: `# PowerShell AD Provisioning Script
+# Create staff OU and seed users automatically
+New-ADOrganizationalUnit -Name "Staff" -Path "DC=homelab,DC=local"
+$users = @(
+    @{ FirstName="John"; LastName="Doe"; Username="jdoe"; Title="SOC Analyst" }
+)
+foreach ($u in $users) {
+    $password = ConvertTo-SecureString "P@ssword123!" -AsPlainText -Force
+    New-ADUser -Name "$($u.FirstName) $($u.LastName)" \`
+               -GivenName $u.FirstName \`
+               -Surname $u.LastName \`
+               -SamAccountName $u.Username \`
+               -UserPrincipalName "$($u.Username)@homelab.local" \`
+               -Path "OU=Staff,DC=homelab,DC=local" \`
+               -AccountPassword $password \`
+               -Title $u.Title \`
+               -Enabled $true
+}`,
+        screenshots: [],
+        socImpact: "Demonstrates fundamental enterprise SecOps and IT Helpdesk skills: managing directory access controls (Active Directory), implementing host-level auditing (Windows Security Event Logs), scripting administrative workflows (PowerShell), and configuring distributed SIEM agents."
     }
 };
 
@@ -301,7 +334,7 @@ const terminalCommands = {
     help: "Available commands:<br>- <strong>about</strong>: Professional summary of Jestine Jojo.<br>- <strong>skills</strong>: Summary of technical tools, languages, and platforms.<br>- <strong>projects</strong>: View a list of technical labs and projects.<br>- <strong>contact</strong>: Access email, phone, and social links.<br>- <strong>whoami</strong>: Displays current user session context.<br>- <strong>clear</strong>: Clears the terminal history.<br>- <strong>exit</strong>: Exits the terminal simulation.",
     about: "Jestine Jojo is a Graduate Cybersecurity Professional with a Bachelor of Cyber Security from Deakin University (Melbourne). Specialize in memory forensics, threat hunting, network traffic analysis, and security automation. Received the Community Impact Award during a website developer internship.",
     skills: "<strong>Security Tools:</strong> Volatility 3, Wireshark, tcpdump, tshark, aircrack-ng, Nmap, Autopsy, Metasploit, Nikto, OWASP ZAP<br><strong>Languages:</strong> Python, Bash, SQL, Java (Spring), JavaScript (React, Vue), HTML5/CSS3<br><strong>Platforms:</strong> Linux (Debian/Ubuntu), Windows, Git/GitHub, Jenkins CI/CD, Redis, Prometheus",
-    projects: "Highlighted Projects:<br>1. <strong>volatility</strong>: Memory forensics & process injection identification.<br>2. <strong>wifi</strong>: WiFi pcap decryption & network forensics.<br>3. <strong>appattack</strong>: Automated security testing toolkit in Python/Bash.<br>4. <strong>sdn</strong>: Mininet network topology creation & DoS simulation.<br>5. <strong>pipeline</strong>: Jenkins declarative CI/CD security gate pipeline.<br>6. <strong>graph-api</strong>: FastAPI + Microsoft Graph OAuth caching service.<br><em>Type 'open [project_name]' (e.g., 'open volatility') to launch the visual writeup modal.</em>",
+    projects: "Highlighted Projects:<br>1. <strong>volatility</strong>: Memory forensics & process injection identification.<br>2. <strong>wifi</strong>: WiFi pcap decryption & network forensics.<br>3. <strong>appattack</strong>: Automated security testing toolkit in Python/Bash.<br>4. <strong>sdn</strong>: Mininet network topology creation & DoS simulation.<br>5. <strong>pipeline</strong>: Jenkins declarative CI/CD security gate pipeline.<br>6. <strong>splunk-homelab</strong>: Splunk SIEM configuration and Docker log forwarding engine.<br>7. <strong>active-directory-lab</strong>: Active Directory enterprise deployment and log ingestion lab.<br><em>Type 'open [project_name]' (e.g., 'open volatility') to launch the visual writeup modal.</em>",
     contact: "Contact Information:<br>- Email: jestinejojo@gmail.com<br>- LinkedIn: linkedin.com/in/jestine-jojo<br>- GitHub: github.com/Jes360",
     whoami: "guest_session_ref_1002@jestine-portfolio.sh (Role: SOC Candidate, Source: Localhost)",
     exit: "Goodbye! Terminal simulation ended. (Feel free to refresh if you want to play again!)"
